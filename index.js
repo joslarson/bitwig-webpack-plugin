@@ -3,7 +3,6 @@ const sortChunks = require('html-webpack-plugin/lib/chunksorter.js').dependency;
 
 class BitwigWebpackPlugin {
     optimizeChunkAssets(compilation, chunks) {
-        console.log(compilation.chunkGroups);
         const orderedChunks = sortChunks(chunks, compilation.chunkGroups);
         const files = orderedChunks.reduce((result, chunk) => [...result, ...chunk.files], []);
         const entries = files.filter(file => file.match(/\.control\.js$/));
