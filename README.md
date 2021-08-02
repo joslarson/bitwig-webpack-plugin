@@ -1,6 +1,6 @@
 # Bitwig Webpack Plugin
 
-Webpack compatibility layer for Bitwig's scripting environment.
+Webpack compatibility layer for Bitwig's scripting environment. Requires webpack v5+.
 
 Currently this plugin just adds support for chunking by adding the appropriate ordered `load` calls to the top of entry files.
 
